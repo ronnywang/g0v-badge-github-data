@@ -1,2 +1,6 @@
-outputs
+outputs/
+issues/
+repo/
 config.php
+github-id.csv
+github-badge.jsonl

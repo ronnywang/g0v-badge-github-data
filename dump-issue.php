@@ -31,15 +31,13 @@ usort($records, function($a, $b){
 });
 
 $levels = [10, 50, 100, 200, 300, 400, 500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
-$output = fopen('stat.csv', 'w');
-fputcsv($output, ['帳號', '時間', '頻道', '成就']);
 $output_id = fopen('github-id.csv', 'w');
 fputcsv($output_id, ['uid', 'name', 'hash_ids']);
 $output_badge = fopen('github-badge.jsonl', 'w');
 
 $users = new StdClass;
 
-$add_trophy = function($obj) use ($users, $output, $output_id, $output_badge, &$accounts, $titles){
+$add_trophy = function($obj) use ($users, $output_id, $output_badge, &$accounts, $titles){
     list($user, $time, $brief, $extra) = $obj;
 
     if (!array_key_exists($user , $accounts)) {
