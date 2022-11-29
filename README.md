@@ -14,4 +14,6 @@ g0v github 歷程整理器
   - 未登入有存取限制，要突破限制請將 config.sample.php 複製至 config.php ，並填入 token
 - php dump-issue.php # 將 issues/ 內的 issue 相關成就產生出來
 
-
+License
+-------
+以上程式以 BSD License 開放授權
