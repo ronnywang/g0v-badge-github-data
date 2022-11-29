@@ -5,6 +5,7 @@ $columns = [
 ];
 
 $output = fopen('php://output', 'w');
+fputcsv($output, $columns);
 for ($p = 1; true; $p ++) {
     $url = "https://api.github.com/orgs/g0v/repos?page=" . $p;
     $cmd = sprintf("curl %s", escapeshellarg($url));
