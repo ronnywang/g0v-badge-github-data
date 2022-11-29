@@ -1,8 +1,16 @@
 <?php
 
 $fp = fopen('repo.csv', 'r');
+$columns = fgetcsv($fp);
 while ($rows = fgetcsv($fp)) {
-    list($repo) = $rows;
+    $values = array_combine($columns, $rows);
+    $repo = $values['name'];
+    if (file_exists("outputs/{$repo}.csv")) {
+        continue;
+    }
+    if ($values['size'] > 1024000) {
+        continue;
+    }
 
     error_log($repo);
 
