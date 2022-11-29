@@ -8,6 +8,9 @@ g0v github 歷程整理器
 - php crawl-list.php > repo.csv  # 抓取 repo 列表
 - php check-repo.php {repo} # 將 {repo} 抓下來，並且匯出 commit log
 - php check-all-repo.php # 裡用 check-repo.php ，將 repo.csv 裡面所有的 repo 結果都寫入 outputs/{repo}.csv
-  
+
+- php crawl-issue.php # 將 repo.csv 的 issue 記錄寫到 issues/
+  - 未登入有存取限制，要突破限制請將 config.sample.php 複製至 config.php ，並填入 token
+- php dump-issue.php # 將 issues/ 內的 issue 相關成就產生出來
 
 
